@@ -27,4 +27,17 @@ function startGame(){
     document.getElementById("selected_word").innerHTML = answerDisplay.join(" ")
 };
 
+function checkLetters(letter){
+    console.log("letter: ",letter)
+};
+
+
 startGame();
+
+document.onkeyup = function(event){
+    console.log("event: ",event)
+    var letterGuessed = String.fromCharCode(event.keyCode).toLowerCase();
+    console.log("letterGuessed: ",letterGuessed)
+
+    checkLetters(letterGuessed)
+};

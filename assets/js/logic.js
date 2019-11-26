@@ -1,47 +1,30 @@
-// Global Variables
-// =======================================================================
-var wordArray = ["Goku","Vegeta","Tien"];
+
+var wordBank = ["Apple","Pear","Blueberry"];
 var selectedWord = "";
-var lettersInWord = [];
+var lettersInSelectedWord = [];
+var numBlanks = 0;
 var answerDisplay = [];
 var wrongLetters = [];
-var numBlanks = 0;
 
-// Stats
+// Game stats
 var wins = 0;
 var losses = 0;
-var guessesLeft = 9;
+var guessesRemaining = 9;
 
-
-// Functions
-// =======================================================================
 function startGame(){
-    selectedWord = wordArray[Math.floor(Math.random()*wordArray.length)]
-    console.log("selectedWord: ",selectedWord)
-    lettersInWord = selectedWord.split("")
-    console.log("Letters in word: ",lettersInWord)
-    numBlanks = lettersInWord.length;
-    console.log("numBlanks: ", numBlanks)
+    selectedWord = wordBank[Math.floor(Math.random()*wordBank.length)];
+    console.log("selectedWord: ", selectedWord);
+    lettersInSelectedWord = selectedWord.split("");
+    console.log("lettersInSelectedWord: ",lettersInSelectedWord);
+    numBlanks = lettersInSelectedWord.length;
+    console.log("numBlanks",numBlanks);
 
-    // Reset guesses left, wrong letters guessed and the answerDisplay
-    guessesLeft = 9;
-    wrongLetters = [];
-    answerDisplay = [];
-
-    // Image reset for the characters
-
-
-    // ==================
-
-    for(let i = 0; i < numBlanks; i++){
-        answerDisplay.push("_")
+    for(let i = 0; i < numBlanks; i ++){
+        answerDisplay.push("_");
+        console.log("answerDisplay: ",answerDisplay)
     }
 
     document.getElementById("selected_word").innerHTML = answerDisplay.join(" ")
-}
+};
 
-
-
-// =======================================================================
-startGame()
-console.log("displayBlanks: ",answerDisplay)
+startGame();

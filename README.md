@@ -1,7 +1,7 @@
 
  <h3 align="center">DragonBall Hangman</h3>
  
-![Project Name](gif/dbz.gif)
+![Project Name](gif/dbzgif.gif)
 
 <!-- PROJECT LOGO -->
 <br />

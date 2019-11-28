@@ -8,3 +8,11 @@
 .dead {
     opacity: .5;
 }
+
+body {
+    background-image: url("../img/stage.png");
+    background-repeat: no-repeat;
+    width: auto;
+    height: 100%;
+    background-position: center;
+}

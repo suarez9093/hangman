@@ -5,7 +5,9 @@ var lettersInSelectedWord = [];
 var numBlanks = 0;
 var answerDisplay = [];
 var wrongLetters = [];
-
+// var dragonBall = document.createElement("img");
+// dragonBall.src = "../img/dragonball.png"
+// console.log("dragonball",dragonBall)
 // Game stats
 var wins = 0;
 var losses = 0;

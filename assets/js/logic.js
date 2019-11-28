@@ -48,6 +48,7 @@ function checkLetters(letter){
     console.log("answerDisplay: ",answerDisplay);
     console.log("wrongLetters: ",wrongLetters);
     console.log("guessesRemaining: ",guessesRemaining);
+    document.getElementById("selected_word").innerHTML = answerDisplay.join(" ")
 }
 
 

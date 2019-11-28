@@ -47,8 +47,11 @@ h1 {
     box-shadow: 0 3px 6px rgba(0,0,0,.16), 0 3px 6px rgba(0,0,0,.23);
 
 }
+.audio_container {
+    text-align: center;
+}
 .player {
-    margin-top: 150px;
+    margin-top: 10px;
 }
 .dead {
     opacity: .5;

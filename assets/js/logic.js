@@ -1,6 +1,6 @@
 window.onload = function () {
 
-    var wordBank = ["goku", "vegeta", "trunks"];
+    var wordBank = ["goku", "vegeta", "trunks","bulma","cell","vegito","gogeta","majin buu", "dragonballz","kamehameha"];
     var selectedWord = "";
     var lettersInSelectedWord = [];
     var numBlanks = 0;

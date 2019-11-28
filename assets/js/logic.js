@@ -97,21 +97,30 @@ document.onkeyup = function (event) {
     }
     if( guessesRemaining == 6){
         console.log("6")
+        document.getElementById("trunks").classList.add("dead")
+        document.getElementById("audio").play();
     }
     if( guessesRemaining == 5){
         console.log("5")
+        document.getElementById("gohan").classList.add("dead")
+        document.getElementById("audio").play();
     }
     if( guessesRemaining == 4){
         console.log("4")
+        document.getElementById("freiza").classList.add("dead")
+        document.getElementById("audio").play();
     }
     if( guessesRemaining == 3){
         console.log("3")
+        document.getElementById("audio").play();
     }
     if( guessesRemaining == 2){
         console.log("2")
+        document.getElementById("audio").play();
     }
     if( guessesRemaining == 1){
         console.log("1")
+        document.getElementById("audio").play();
     }
 };
 

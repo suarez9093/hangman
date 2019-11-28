@@ -15,28 +15,40 @@ h1 {
     font-size: 40px;
 }
 
-.logo {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-}
-.character_container {
-    float: left;
-    position: relative;
-    top: 80px
-}
+
 .character_image {
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 5px;
+    background-size: cover;
+    background-position: 50%;
+    height: 170px;
     width: 150px;
+    margin: 8px 10px;
+    border: 5px solid #f1f1f1;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.16), 0 3px 6px rgba(0,0,0,.23);
+    box-shadow: 0 3px 6px rgba(0,0,0,.16), 0 3px 6px rgba(0,0,0,.23);
+    cursor: pointer;
+    background: white ;
     
 }
+.logo {
+    margin-bottom: 50px;
+}
+
 
 .all_text {
-    float: right;
     text-align: center;
+    background-color: rgb(240, 236, 236);
+    background-size: cover;
+    background-position: 50%;
+    margin: 8px 10px;
+    border: 5px solid #f1f1f1;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.16), 0 3px 6px rgba(0,0,0,.23);
+    box-shadow: 0 3px 6px rgba(0,0,0,.16), 0 3px 6px rgba(0,0,0,.23);
+
+}
+.player {
+    margin-top: 150px;
 }
 .dead {
     opacity: .5;

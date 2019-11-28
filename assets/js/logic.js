@@ -49,6 +49,8 @@ function checkLetters(letter){
     console.log("wrongLetters: ",wrongLetters);
     console.log("guessesRemaining: ",guessesRemaining);
     document.getElementById("selected_word").innerHTML = answerDisplay.join(" ")
+    document.getElementById("wrongLetters").innerHTML = wrongLetters
+    document.getElementById("guessesRemaining").innerHTML = "Guesses Remaining: " + guessesRemaining
 }
 
 

@@ -23,19 +23,34 @@ function startGame() {
         answerDisplay.push("_");
         console.log("answerDisplay: ", answerDisplay)
     }
-
     document.getElementById("selected_word").innerHTML = answerDisplay.join(" ")
 };
 
-function checkLetters(letter) {
-    if (event.keyCode >= 65 && event.keyCode <= 90) {
-        for (var i = 0; i < numBlanks; i++) {
-            if (selectedWord[i] === letter) {  
-                answerDisplay[i] = letter;
+function checkLetters(letter){
+    if(event.keyCode >=65 && event.keyCode <= 90){
+        var correctLetter = false;
+        for(let i = 0; i < numBlanks; i++){
+            if(selectedWord[i] == letter){
+                correctLetter = true;
             }
         }
+        if(correctLetter){
+            for(let i = 0; i < numBlanks; i++){
+                if(selectedWord[i] == letter){
+                    answerDisplay[i] = letter;
+                } 
+            }
+        } else {
+            wrongLetters.push(letter);
+            guessesRemaining--;
+        }
     }
-};
+    console.log("answerDisplay: ",answerDisplay);
+    console.log("wrongLetters: ",wrongLetters);
+    console.log("guessesRemaining: ",guessesRemaining);
+}
+
+
 
 startGame();
 
@@ -46,3 +61,5 @@ document.onkeyup = function (event) {
 
     checkLetters(letterGuessed)
 };
+
+console.log(guessesRemaining)

@@ -6,16 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Dragonball Z Hangman</title>
+    <link rel="stylesheet" type="text/css" href="./assets//css/reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css" integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="./assets//css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div>
-        <img src="./assets/img/logo.png" alt="logo"/>
+        <img id="logo" src="./assets/img/logo.png" alt="logo" />
+    <div class="character_container">
         <img id="goku" class="character_image" src="./assets/img/goku.jpg" alt="goku" />
         <img id="vegeta" class="character_image" src="./assets/img/vegeta.jpg" alt="vegeta" />
     </div>
     <div>
+    <div class="all_text">
         <h1>Selected Word</h1>
         <h1 id="selected_word"></h1>
     </div>
@@ -25,6 +29,7 @@
         <h1 id="wins">Wins:</h1>
         <h1 id="losses">Losses:</h1>
     </div>
+</div>
     <audio id="audio" controls style="display:none">
         <source src="./assets/sounds/punch.mp3" type="audio/mpeg">
     </audio>

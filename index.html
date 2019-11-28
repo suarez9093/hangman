@@ -6,28 +6,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Dragonball Z Hangman</title>
+    <link rel="stylesheet" type="text/css" href="./assets//css/reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css"
+        integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="./assets//css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div>
-            <audio id="audio" controls style="display:none">
-                    <source src="./assets/sounds/punch.mp3" type="audio/mpeg">
-                  </audio>
-        <img id="goku" class="character_image" src="https://i.pinimg.com/originals/05/0d/7d/050d7dc21e4416bb142ea832d8f175b9.jpg" alt="goku"/>
-        <img id="vegeta" class="character_image" src="https://qph.fs.quoracdn.net/main-qimg-40ccab97c4b182082c3525bb34575a37.webp" alt="vegeta"/>
-    </div>
-    <div>
-        <h1>Selected Word</h1>
-        <h1 id="selected_word"></h1>
-    </div>
-    <h1 id="guessesRemaining">Guesses Remaining: 9</h1>
-    <h1 id="wrongLetters">Letters Guessed:</h1>
-    <div>
-        <h1 id="wins">Wins:</h1>
-        <h1 id="losses">Losses:</h1>
-    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm"></div>
+            <img class="col-sm" id="logo" src="./assets/img/logo.png" alt="logo" />
+            <div class="col-sm"></div>
+        </div>
+        <div class="row">
+            <div class="col-sm">
+                    <img id="cell" class="character_image" src="./assets/img/cell.jpg" alt="cell" />
+                    <img id="buu" class="character_image" src="./assets/img/buu.jpg" alt="buu" />
+                    <img id="vegito" class="character_image" src="./assets/img/vegito.png" alt="vegito" />
+                    <img id="gogeta" class="character_image" src="./assets/img/gogeta.png" alt="gogeta" />
+                <img id="trunks" class="character_image" src="./assets/img/trunks.png" alt="trunks" />
+                <img id="gohan" class="character_image" src="./assets/img/gohan.jpeg" alt="gohan" />
+                <img id="freiza" class="character_image" src="./assets/img/freiza.png" alt="freiza" />
+                <img id="goku" class="character_image" src="./assets/img/goku.png" alt="goku" />
+                <img id="vegeta" class="character_image" src="./assets/img/vegeta1.jpg" alt="vegeta" />
+            </div>
 
+            <div class="col-sm">
+                <div class="all_text">
+                    <h1>Selected Word</h1>
+                    <div class="chosen_word_box">
+                        <h1 id="selected_word"></h1>
+                    </div>
+                    <h1 id="guessesRemaining">Guesses Remaining: 9</h1>
+                    <h1 id="wrongLetters">Letters Guessed:</h1>
+
+                    <h1 id="wins">Wins:</h1>
+                    <h1 id="losses">Losses:</h1>
+                </div>
+            </div>
+
+        </div>
+        <audio id="audio" controls style="display:none">
+            <source src="./assets/sounds/punch.mp3" type="audio/mpeg">
+
+        </audio>
+        <div class="row">
+            <div class="col-sm"></div>
+            <audio class="player" controls>
+                <source src="./assets/sounds/themeSong.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <div class="col-sm"></div>
+        </div>
+
+    </div>
     <script src="./assets/js/logic.js"></script>
 </body>
 

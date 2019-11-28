@@ -11,14 +11,22 @@
 
 <body>
     <div>
+            <audio id="audio" controls style="display:none">
+                    <source src="./assets/sounds/punch.mp3" type="audio/mpeg">
+                  </audio>
+        <img id="goku" class="character_image" src="https://i.pinimg.com/originals/05/0d/7d/050d7dc21e4416bb142ea832d8f175b9.jpg" alt="goku"/>
+        <img id="vegeta" class="character_image" src="https://qph.fs.quoracdn.net/main-qimg-40ccab97c4b182082c3525bb34575a37.webp" alt="vegeta"/>
+    </div>
+    <div>
         <h1>Selected Word</h1>
         <h1 id="selected_word"></h1>
     </div>
     <h1 id="guessesRemaining">Guesses Remaining: 9</h1>
-    <h1 id="wrongLetters"></h1>
-    <h1 id="wins"></h1>
-    <h1 id="losses"></h1>
-
+    <h1 id="wrongLetters">Letters Guessed:</h1>
+    <div>
+        <h1 id="wins">Wins:</h1>
+        <h1 id="losses">Losses:</h1>
+    </div>
 
     <script src="./assets/js/logic.js"></script>
 </body>

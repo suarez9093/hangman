@@ -1,5 +1,4 @@
 window.onload = function () {
-    document.getElementById("themeSong").play();
 
     var wordBank = ["goku", "vegeta", "trunks"];
     var selectedWord = "";

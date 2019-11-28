@@ -50,6 +50,9 @@ h1 {
 .audio_container {
     text-align: center;
 }
+.instructions {
+    text-align: center;
+}
 .player {
     margin-top: 10px;
 }

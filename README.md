@@ -12,7 +12,7 @@
     Hangman Game
     <br />
     <br />
-    <a href="https://suarez9093.github.io/hangman_redone/">View live Demo</a>
+    <a href="https://suarez9093.github.io/hangman/">View live Demo</a>
   </p>
 </p>
 

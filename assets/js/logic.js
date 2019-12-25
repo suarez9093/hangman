@@ -1,16 +1,11 @@
-window.onload = function () {
-
-
+window.onload = function(){
     var wordBank = ["goku", "vegeta", "trunks", "bulma", "cell", "vegito", "gogeta", "majin buu", "dragonballz", "kamehameha"];
     var selectedWord = "";
     var lettersInSelectedWord = [];
     var numBlanks = 0;
     var answerDisplay = [];
     var wrongLetters = [];
-    // var dragonBall = document.createElement("img");
-    // dragonBall.src = "../img/dragonball.png"
-    // console.log("dragonball",dragonBall)
-    // Game stats
+   
     var wins = 0;
     var losses = 0;
     var guessesRemaining = 9;
@@ -106,11 +101,16 @@ window.onload = function () {
                 document.getElementById("buu").classList.add("dead");
                 break;
             case 0:
-                alert(`You lose! The word was ${selectedWord}`);
+                // alert(`Yoqu lose! The word was ${selectedWord}`);
                 losses++;
                 document.getElementById("losses").innerHTML = "Losses:" + " " + losses;
-                document.getElementById("wrongLetters").innerHTML = "Letters Guessed:"
-                startGame();
+                document.getElementById("wrongLetters").innerHTML = "Letters Guessed:";
+                document.getElementById("modal-title").innerHTML = `${selectedWord}`;
+                document.getElementById("")
+                $('#myModal').modal(
+                    $("#modalCharacterInfo").html("Some text")
+                )
+                // startGame();
                 break;
         }
     }

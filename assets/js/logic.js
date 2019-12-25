@@ -1,7 +1,7 @@
 window.onload = function () {
 
-    
-    var wordBank = ["goku", "vegeta", "trunks","bulma","cell","vegito","gogeta","majin buu", "dragonballz","kamehameha"];
+
+    var wordBank = ["goku", "vegeta", "trunks", "bulma", "cell", "vegito", "gogeta", "majin buu", "dragonballz", "kamehameha"];
     var selectedWord = "";
     var lettersInSelectedWord = [];
     var numBlanks = 0;
@@ -13,7 +13,7 @@ window.onload = function () {
     // Game stats
     var wins = 0;
     var losses = 0;
-    var guessesRemaining;
+    var guessesRemaining = 9;
 
     function startGame() {
         selectedWord = wordBank[Math.floor(Math.random() * wordBank.length)];
@@ -74,15 +74,44 @@ window.onload = function () {
         document.getElementById("guessesRemaining").innerHTML = "Guesses Remaining: " + guessesRemaining
 
         if (lettersInSelectedWord.toString() == answerDisplay.toString()) {
+            alert(`You win! The word was ${selectedWord}`)
             wins++
             document.getElementById("wins").innerHTML = "Wins:" + " " + wins;
             document.getElementById("wrongLetters").innerHTML = "Letters Guessed:"
             startGame();
-        } else if (guessesRemaining === 0) {
-            losses++;
-            document.getElementById("losses").innerHTML = "Losses:" + " " + losses;
-            document.getElementById("wrongLetters").innerHTML = "Letters Guessed:"
-            startGame();
+        }
+        switch (guessesRemaining) {
+            case 8:
+                document.getElementById("goku").classList.add("dead");
+                break;
+            case 7:
+                document.getElementById("vegeta").classList.add("dead");
+                break;
+            case 6:
+                document.getElementById("trunks").classList.add("dead");
+                break;
+            case 5:
+                document.getElementById("gohan").classList.add("dead");
+                break;
+            case 4:
+                document.getElementById("freiza").classList.add("dead");
+                break;
+            case 3:
+                document.getElementById("vegito").classList.add("dead");
+                break;
+            case 2:
+                document.getElementById("gogeta").classList.add("dead");
+                break;
+            case 1:
+                document.getElementById("buu").classList.add("dead");
+                break;
+            case 0:
+                alert(`You lose! The word was ${selectedWord}`);
+                losses++;
+                document.getElementById("losses").innerHTML = "Losses:" + " " + losses;
+                document.getElementById("wrongLetters").innerHTML = "Letters Guessed:"
+                startGame();
+                break;
         }
     }
 
@@ -93,50 +122,12 @@ window.onload = function () {
     startGame();
 
     document.onkeyup = function (event) {
-        // console.log("event: ",event)
         var letterGuessed = String.fromCharCode(event.keyCode).toLowerCase();
-        // console.log("letterGuessed: ",letterGuessed)
 
         checkLetters(letterGuessed)
         endRound();
 
-        if (guessesRemaining == 8) {
-            document.getElementById("goku").classList.add("dead")
-            document.getElementById("audio").play();
 
-        }
-        if (guessesRemaining == 7) {
-            document.getElementById("vegeta").classList.add("dead")
-            document.getElementById("audio").play();
-        }
-        if (guessesRemaining == 6) {
-            document.getElementById("trunks").classList.add("dead")
-            document.getElementById("audio").play();
-        }
-        if (guessesRemaining == 5) {
-            document.getElementById("gohan").classList.add("dead")
-            document.getElementById("audio").play();
-        }
-        if (guessesRemaining == 4) {
-            document.getElementById("freiza").classList.add("dead")
-            document.getElementById("audio").play();
-        }
-        if (guessesRemaining == 3) {
-            document.getElementById("vegito").classList.add("dead")
-            document.getElementById("audio").play();
-        }
-        if (guessesRemaining == 2) {
-            document.getElementById("gogeta").classList.add("dead")
-            document.getElementById("audio").play();
-        }
-        if (guessesRemaining == 1) {
-            document.getElementById("buu").classList.add("dead")
-            document.getElementById("audio").play();
-        }
-        if (guessesRemaining == 0) {
-            document.getElementById("cell").classList.add("dead")
-            document.getElementById("audio").play();
-        }
     };
 
 
